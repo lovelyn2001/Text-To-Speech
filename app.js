@@ -8,7 +8,7 @@ const pdf = require('pdf-parse');
 const mammoth = require('mammoth');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.static('public'));
@@ -69,6 +69,6 @@ app.post('/upload', upload.single('file'), (req, res) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
 });
